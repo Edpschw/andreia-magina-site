@@ -1,26 +1,27 @@
 /* Magina — Osteopatia pediátrica
-   Paleta derivada da referência: navy + verde-azulado + menta + pêssego +
-   creme + rosa — rosa em papel estrutural (estrelas, avaliações, marcadores
-   de passo), não só decorativo, para dar presença real ao tom feminino.
-   Lúdico, ilustrado, "picture-book" — colo, família, alegria. */
+   Paleta "Doce candy": roxo-marinho (texto) + turquesa + rosa-chiclete +
+   amarelo-limão + creme quente. A mais saturada e lúdica das 6 opções
+   testadas — turquesa e rosa como cores estruturais (botões, estrelas),
+   amarelo-limão para avaliações/destaque. Lúdico, ilustrado, "picture-book"
+   — colo, família, alegria. */
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
 
 :root{
-  --cream:#FFF3E6;
-  --cream-2:#CFE5D6;
+  --cream:#FFF9F5;
+  --cream-2:#DFF3F0;
   --card:#FFFFFF;
-  --ink:#2D3E5E;
-  --ink-soft:#6E655A;
-  --coral:#9C6040;
-  --coral-deep:#8A4E2D;
-  --sky:#487872;
-  --sky-deep:#3F726C;
-  --sun:#E695B4;
-  --leaf:#8FC4B4;
-  --pink:#E695B4;
-  --pink-deep:#B85F84;
-  --shadow: 0 2px 0 rgba(45,62,94,.06), 0 18px 34px -18px rgba(45,62,94,.28);
+  --ink:#34314C;
+  --ink-soft:#746F8F;
+  --coral:#FF8FA3;
+  --coral-deep:#E56A82;
+  --sky:#34B6A8;
+  --sky-deep:#21877D;
+  --sun:#FFD24C;
+  --leaf:#DFF3F0;
+  --pink:#FFD24C;
+  --pink-deep:#D4A926;
+  --shadow: 0 2px 0 rgba(52,49,76,.08), 0 18px 34px -18px rgba(52,49,76,.30);
 }
 
 .ped-scope{
@@ -115,7 +116,7 @@
 .hero-photo-wrap{position:relative;max-width:320px;margin:0 auto;padding:20px 22px 34px 6px;}
 .hero-photo-blob{position:absolute;top:0;left:14px;right:-8px;bottom:16px;background:var(--cream-2);border-radius:34px;transform:rotate(-3deg);z-index:0;}
 .hero-photo{position:relative;z-index:1;width:100%;aspect-ratio:680/1049;object-fit:cover;border-radius:28px;box-shadow:var(--shadow);display:block;}
-.hero-accent{position:absolute;z-index:2;filter:drop-shadow(0 3px 6px rgba(45,62,94,.18));}
+.hero-accent{position:absolute;z-index:2;filter:drop-shadow(0 3px 6px rgba(52,49,76,.18));}
 .hero-accent-star{width:32px;top:8px;right:2px;}
 .hero-accent-heart{width:36px;bottom:44px;left:-10px;}
 .hero-accent-rainbow{width:120px;bottom:-4px;right:-14px;}
@@ -123,7 +124,7 @@
 /* section decorations — teddy bear, blocks, footprints: playful touches
    scattered through the page, not just the hero */
 .deco-host{position:relative;}
-.section-deco{position:absolute;z-index:1;filter:drop-shadow(0 4px 8px rgba(45,62,94,.14));pointer-events:none;}
+.section-deco{position:absolute;z-index:1;filter:drop-shadow(0 4px 8px rgba(52,49,76,.14));pointer-events:none;}
 .deco-blocks{width:52px;top:2px;right:clamp(20px,5vw,56px);}
 .deco-bear{width:92px;transform:rotate(8deg);}
 .deco-bear-family{top:-18px;left:clamp(10px,3vw,30px);transform:rotate(-9deg);}
@@ -177,10 +178,10 @@
 .about-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
 .about-card li{font-size:.86rem;color:var(--ink-soft);line-height:1.5;padding-left:18px;position:relative;}
 .about-card li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--pink);}
-.bg-coral{background:#FBE1CC;}
-.bg-sky{background:#DCEDE9;}
-.bg-sun{background:#FBE3EC;}
-.bg-pink{background:#F5E1EA;}
+.bg-coral{background:#FFE1E8;}
+.bg-sky{background:#D7F5F0;}
+.bg-sun{background:#FFF3D6;}
+.bg-pink{background:#FFEFC2;}
 
 /* familia / felicidade gallery — illustrated, not stock photos */
 .family-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
@@ -209,13 +210,13 @@
 .carousel-slide img{width:100%;height:100%;display:block;object-fit:cover;}
 .carousel-caption{
   position:absolute;left:0;right:0;bottom:0;padding:34px 24px 16px;
-  background:linear-gradient(0deg, rgba(45,62,94,.6), transparent);
+  background:linear-gradient(0deg, rgba(52,49,76,.6), transparent);
   color:#fff;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:1rem;
 }
 .carousel-arrow{
   position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;
   background:rgba(255,255,255,.9);border:none;display:flex;align-items:center;justify-content:center;
-  font-size:1.3rem;line-height:1;cursor:pointer;color:var(--ink);box-shadow:0 2px 10px rgba(45,62,94,.22);
+  font-size:1.3rem;line-height:1;cursor:pointer;color:var(--ink);box-shadow:0 2px 10px rgba(52,49,76,.22);
   transition:background .15s ease;
 }
 .carousel-arrow:hover{background:#fff;}
@@ -248,7 +249,7 @@
   background:var(--card);border-radius:22px;padding:20px 22px;box-shadow:var(--shadow);
 }
 .how-num{
-  width:40px;height:40px;border-radius:50%;background:var(--sun);color:#2D3E5E;
+  width:40px;height:40px;border-radius:50%;background:var(--sun);color:#34314C;
   display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',sans-serif;font-weight:700;
 }
 .how-row h4{font-size:1.02rem;margin-bottom:4px;}
@@ -287,21 +288,21 @@
 }
 @media (max-width:700px){.ped-cta-panel{grid-template-columns:1fr;text-align:center;}}
 .ped-cta-panel h3{color:#fff;font-size:1.6rem;margin-bottom:8px;}
-.ped-cta-panel p{color:#E3F0EC;font-size:.98rem;max-width:48ch;}
-.ped-cta-panel .ped-btn-primary{background:#fff;color:var(--sky-deep);box-shadow:0 6px 0 #D9EEE8;}
-.ped-cta-panel .ped-btn-primary:hover{box-shadow:0 4px 0 #D9EEE8;}
+.ped-cta-panel p{color:#DFF9F5;font-size:.98rem;max-width:48ch;}
+.ped-cta-panel .ped-btn-primary{background:#fff;color:var(--sky-deep);box-shadow:0 6px 0 #A8E0D6;}
+.ped-cta-panel .ped-btn-primary:hover{box-shadow:0 4px 0 #A8E0D6;}
 
 /* botão flutuante de WhatsApp */
 .float-whatsapp{
   position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;
-  background:#487872;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 8px 20px rgba(45,62,94,.3);z-index:50;
+  background:#34B6A8;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 20px rgba(52,49,76,.3);z-index:50;
   opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;
   transition:opacity .25s ease,transform .25s ease;
 }
 .float-whatsapp.is-visible{opacity:1;transform:none;pointer-events:auto;}
 .float-whatsapp svg{width:28px;height:28px;}
-.float-whatsapp:hover{background:#3F726C;}
+.float-whatsapp:hover{background:#21877D;}
 @media (max-width:480px){.float-whatsapp{right:16px;bottom:16px;width:50px;height:50px;}.float-whatsapp svg{width:24px;height:24px;}}
 
 /* footer */
