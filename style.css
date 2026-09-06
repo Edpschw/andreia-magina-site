@@ -183,6 +183,7 @@
 .about-card ul.cred-list li::before{display:none;}
 .about-card ul.cred-list li b{display:block;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:4px;}
 .about-card ul.cred-list li span{display:block;font-size:.78rem;color:var(--ink-soft);}
+.about-card ul.cred-list--pink li{border-left-color:var(--pink-deep);}
 .bg-coral{background:#FFE1E8;}
 .bg-sky{background:#D7F5F0;}
 .bg-sun{background:#FFF3D6;}
