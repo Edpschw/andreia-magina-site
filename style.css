@@ -178,6 +178,11 @@
 .about-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
 .about-card li{font-size:.86rem;color:var(--ink-soft);line-height:1.5;padding-left:18px;position:relative;}
 .about-card li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--pink);}
+.about-card ul.cred-list{gap:13px;}
+.about-card ul.cred-list li{padding-left:14px;border-left:3px solid var(--sky);}
+.about-card ul.cred-list li::before{display:none;}
+.about-card ul.cred-list li b{display:block;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:2px;}
+.about-card ul.cred-list li span{display:block;font-size:.78rem;color:var(--ink-soft);}
 .bg-coral{background:#FFE1E8;}
 .bg-sky{background:#D7F5F0;}
 .bg-sun{background:#FFF3D6;}
