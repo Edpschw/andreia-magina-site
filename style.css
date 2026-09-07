@@ -103,21 +103,32 @@
   .hero-headline .rw{animation:none;opacity:1;transform:none;}
 }
 
-/* ursinhos pulando na entrada, antes do texto do headline aparecer */
-.hero-bears{display:flex;gap:8px;height:34px;margin-bottom:6px;}
-.hero-bear{
-  width:34px;height:34px;opacity:0;transform:translateY(14px) scale(.7);
-  animation:bear-jump .7s cubic-bezier(.34,1.56,.64,1) forwards;
-  animation-delay:calc(var(--i) * .15s + .1s);
+/* bebê e ursinho correndo por cima das letras do headline, pulando no fim */
+.hero-headline{position:relative;}
+.hero-runners{position:absolute;top:-34px;left:0;width:100%;height:0;pointer-events:none;z-index:2;}
+.hero-runner{position:absolute;top:0;left:-46px;width:40px;height:40px;}
+.runner-bear{animation:run-across 2s cubic-bezier(.4,0,.2,1) .2s forwards;}
+.runner-baby{top:8px;animation:run-across 2s cubic-bezier(.4,0,.2,1) .55s forwards;}
+@keyframes run-across{
+  0%{left:-46px;transform:translateY(0) rotate(0deg);}
+  8%{transform:translateY(-7px);}
+  16%{transform:translateY(0);}
+  24%{transform:translateY(-7px);}
+  32%{transform:translateY(0);}
+  40%{transform:translateY(-7px);}
+  48%{transform:translateY(0);}
+  56%{transform:translateY(-7px);}
+  64%{transform:translateY(0);}
+  72%{left:calc(100% - 40px);transform:translateY(0);}
+  85%{transform:translateY(-34px) rotate(-10deg);}
+  100%{left:calc(100% - 40px);transform:translateY(0) rotate(0deg);}
 }
-@keyframes bear-jump{
-  0%{opacity:0;transform:translateY(14px) scale(.7);}
-  55%{opacity:1;transform:translateY(-10px) scale(1.08);}
-  80%{transform:translateY(2px) scale(.97);}
-  100%{opacity:1;transform:translateY(0) scale(1);}
+@media (max-width:600px){
+  .hero-runners{top:-28px;}
+  .hero-runner{width:30px;height:30px;}
 }
 @media (prefers-reduced-motion: reduce){
-  .hero-bear{animation:none;opacity:1;transform:none;}
+  .hero-runners{display:none;}
 }
 .ped-hero h1 .hl{color:var(--coral-deep);}
 .ped-hero .lede{font-size:1.08rem;color:var(--ink-soft);max-width:48ch;margin-bottom:26px;}
