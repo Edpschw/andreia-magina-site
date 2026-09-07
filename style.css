@@ -102,6 +102,23 @@
 @media (prefers-reduced-motion: reduce){
   .hero-headline .rw{animation:none;opacity:1;transform:none;}
 }
+
+/* ursinhos pulando na entrada, antes do texto do headline aparecer */
+.hero-bears{display:flex;gap:8px;height:34px;margin-bottom:6px;}
+.hero-bear{
+  width:34px;height:34px;opacity:0;transform:translateY(14px) scale(.7);
+  animation:bear-jump .7s cubic-bezier(.34,1.56,.64,1) forwards;
+  animation-delay:calc(var(--i) * .15s + .1s);
+}
+@keyframes bear-jump{
+  0%{opacity:0;transform:translateY(14px) scale(.7);}
+  55%{opacity:1;transform:translateY(-10px) scale(1.08);}
+  80%{transform:translateY(2px) scale(.97);}
+  100%{opacity:1;transform:translateY(0) scale(1);}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-bear{animation:none;opacity:1;transform:none;}
+}
 .ped-hero h1 .hl{color:var(--coral-deep);}
 .ped-hero .lede{font-size:1.08rem;color:var(--ink-soft);max-width:48ch;margin-bottom:26px;}
 .ped-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
