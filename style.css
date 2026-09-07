@@ -106,22 +106,25 @@
 /* bebê e ursinho correndo por cima das letras do headline, pulando no fim */
 .hero-headline{position:relative;}
 .hero-runners{position:absolute;top:-34px;left:0;width:100%;height:0;pointer-events:none;z-index:2;}
-.hero-runner{position:absolute;top:0;left:-46px;width:40px;height:40px;}
-.runner-bear{animation:run-across 2s cubic-bezier(.4,0,.2,1) .2s forwards;}
-.runner-baby{top:8px;animation:run-across 2s cubic-bezier(.4,0,.2,1) .55s forwards;}
+.hero-runner{position:absolute;top:0;left:-46px;width:40px;height:40px;transform-origin:center bottom;}
+.runner-bear{animation:run-across 2.3s cubic-bezier(.4,0,.2,1) .2s forwards;}
+.runner-baby{top:8px;animation:run-across 2.3s cubic-bezier(.4,0,.2,1) .55s forwards;}
 @keyframes run-across{
-  0%{left:-46px;transform:translateY(0) rotate(0deg);}
-  8%{transform:translateY(-7px);}
-  16%{transform:translateY(0);}
-  24%{transform:translateY(-7px);}
-  32%{transform:translateY(0);}
-  40%{transform:translateY(-7px);}
-  48%{transform:translateY(0);}
-  56%{transform:translateY(-7px);}
-  64%{transform:translateY(0);}
-  72%{left:calc(100% - 40px);transform:translateY(0);}
-  85%{transform:translateY(-34px) rotate(-10deg);}
-  100%{left:calc(100% - 40px);transform:translateY(0) rotate(0deg);}
+  0%{left:-46px;opacity:1;transform:translateY(0) scale(1);}
+  7%{transform:translateY(-7px) scale(1);}
+  14%{transform:translateY(0) scale(1);}
+  21%{transform:translateY(-7px) scale(1);}
+  28%{transform:translateY(0) scale(1);}
+  35%{transform:translateY(-7px) scale(1);}
+  42%{transform:translateY(0) scale(1);}
+  49%{transform:translateY(-7px) scale(1);}
+  56%{transform:translateY(0) scale(1);}
+  63%{left:calc(100% - 40px);opacity:1;transform:translateY(0) scale(1);}
+  /* pulo final e "dissolve" tipo poça d'água — sobe, esparrama no impacto,
+     e derrete achatando até sumir, em vez de simplesmente ficar parado */
+  76%{opacity:1;transform:translateY(-32px) scale(1.05);}
+  86%{opacity:1;transform:translateY(2px) scale(1.2,.7);}
+  100%{opacity:0;transform:translateY(6px) scale(.25,.12);}
 }
 @media (max-width:600px){
   .hero-runners{top:-28px;}
